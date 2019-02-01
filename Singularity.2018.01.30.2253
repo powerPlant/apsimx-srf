@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: ubuntu:bionic
+From: ubuntu:artful
 
 %labels
 Maintainer eric.burgueno@plantandfood.co.nz
