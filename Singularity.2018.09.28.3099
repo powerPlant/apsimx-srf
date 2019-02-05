@@ -27,4 +27,4 @@ Version 2018.09.28.3099
   apt-get -y autoremove --purge
 
 %runscript
-  /usr/local/bin/apsimmodels "$@"
+  exec /usr/local/bin/apsimmodels "$@"
