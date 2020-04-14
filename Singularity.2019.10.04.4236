@@ -6,7 +6,7 @@ Maintainer eric.burgueno@plantandfood.co.nz
 Version 2019.10.04.4236
 
 %setup
-  curl --silent -o ${SINGULARITY_ROOTFS}/tmp/ApsimSetup.deb http://www.apsim.info/ApsimXFiles/ApsimSetup4236.deb
+  curl --silent -o ${SINGULARITY_ROOTFS}/tmp/ApsimSetup.deb http://apsimdev.apsim.info/ApsimXFiles/ApsimSetup4236.deb
 
 %post
   ## Configure timezone
