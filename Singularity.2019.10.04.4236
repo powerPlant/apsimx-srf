@@ -6,7 +6,7 @@ Maintainer eric.burgueno@plantandfood.co.nz
 Version 2019.10.04.4236
 
 %setup
-  curl --silent -o ${SINGULARITY_ROOTFS}/tmp/ApsimSetup.deb http://apsimdev.apsim.info/ApsimXFiles/ApsimSetup4236.deb
+  curl --silent -o ${SINGULARITY_ROOTFS}/ApsimSetup.deb http://apsimdev.apsim.info/ApsimXFiles/ApsimSetup4236.deb
 
 %post
   ## Configure timezone
@@ -15,14 +15,14 @@ Version 2019.10.04.4236
   ln -fs /usr/share/zoneinfo/Pacific/Auckland /etc/localtime && dpkg-reconfigure -f noninteractive tzdata
   
   ## Install from deb file
-  apt -y install /tmp/ApsimSetup.deb
+  apt -y install /ApsimSetup.deb
   
   ## Create entrypoint
   cp -a /usr/local/bin/apsim /usr/local/bin/apsimmodels
   sed -i 's/ApsimNG/Models/' /usr/local/bin/apsimmodels
 
   ## Cleanup
-  rm -rf /tmp/ApsimSetup.deb
+  rm -rf /ApsimSetup.deb
   apt-get -y clean all
   apt-get -y autoremove --purge
 
